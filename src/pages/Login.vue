@@ -24,6 +24,8 @@ export default {
         password: this.password
       }
       console.log(loginData)
+      // 로그인 처리
+      this.$router.push({ name: 'Home' })
     }
   }
 }
