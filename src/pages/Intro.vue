@@ -2,7 +2,7 @@
 import AppButton from '../components/AppButton'
 
 export default {
-  name: 'Splash',
+  name: 'Intro',
   components: {
     AppButton
   },

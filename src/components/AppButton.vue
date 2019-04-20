@@ -33,7 +33,7 @@ export default {
 
   methods: {
     click (e) {
-      if (this.active) this.$emit('click', e)
+      this.$emit('click', e)
     }
   }
 }
