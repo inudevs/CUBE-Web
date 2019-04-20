@@ -1,24 +1,16 @@
 <script>
-import { IconHome, IconTemp, IconLight, IconGear } from '../components/icons'
 import AppTitle from '../components/AppTitle'
+import AppMenu from '../components/AppMenu'
 
 export default {
   name: 'Index',
   components: {
     AppTitle,
-    IconHome,
-    IconTemp,
-    IconLight,
-    IconGear
+    AppMenu
   },
   data () {
     return {
       list: []
-    }
-  },
-  methods: {
-    moveTo (path) {
-      this.$router.push(path)
     }
   }
 }
@@ -36,14 +28,7 @@ export default {
         <i class="fas fa-plus-circle create"></i>
       </div>
     </div>
-    <div class="menu">
-      <div class="icons">
-        <icon-home @click="moveTo({ name: 'Home' })" color="#48b6ff" />
-        <icon-temp @click="moveTo({ name: 'Temp' })" />
-        <icon-light @click="moveTo({ name: 'Light' })" />
-        <icon-gear @click="moveTo({ name: 'Settings' })" />
-      </div>
-    </div>
+    <app-menu current="home" />
   </div>
 </template>
 
@@ -67,29 +52,5 @@ export default {
   font-size: 3em;
   color: #606060;
   margin: auto;
-}
-
-.menu {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  padding: 0.5em;
-  width: 100%;
-  border: none;
-  border-top: 0.5px solid #707070;
-  text-align: center;
-}
-
-.icons {
-  width: 90%;
-  display: table;
-  margin: auto;
-
-  .icon {
-    cursor: pointer;
-    display: table-cell;
-    width: 20%;
-    background: none;
-  }
 }
 </style>

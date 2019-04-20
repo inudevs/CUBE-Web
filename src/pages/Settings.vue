@@ -1,24 +1,19 @@
 <script>
-import { IconHome, IconTemp, IconLight, IconGear } from '../components/icons'
 import AppTitle from '../components/AppTitle'
+import AppMenu from '../components/AppMenu'
 
 export default {
   name: 'Index',
   components: {
     AppTitle,
-    IconHome,
-    IconTemp,
-    IconLight,
-    IconGear
+    AppMenu
   },
   data () {
     return {
-      list: []
-    }
-  },
-  methods: {
-    moveTo (path) {
-      this.$router.push(path)
+      user: {
+        name: '여준호',
+        email: 'jyeo@civar.dev'
+      }
     }
   }
 }
@@ -27,23 +22,26 @@ export default {
 <template>
   <div class="content">
     <app-title />
-    <div class="list">
-      <div
-        class="none"
-        v-if="!list.length"
-      >
-        <p>아직 보관 중인 물건이 없으시네요?</p>
-        <i class="fas fa-plus-circle create"></i>
+    <div class="profile">
+      <img src="https://avatars0.githubusercontent.com/u/32605822?s=460">
+      <div class="about">
+        <div class="about__menu">
+          <div class="field">이름</div>
+          <div class="value">{{ user.name }}</div>
+        </div>
+        <div class="about__menu">
+          <div class="field">이메일</div>
+          <div class="value">{{ user.email }}</div>
+        </div>
+        <div class="about__menu">
+          <div class="setting">비밀번호 변경</div>
+        </div>
+        <div class="about__menu">
+          <div class="setting">로그아웃</div>
+        </div>
       </div>
     </div>
-    <div class="menu">
-      <div class="icons">
-        <icon-home @click="moveTo({ name: 'Home' })" />
-        <icon-temp @click="moveTo({ name: 'Temp' })" />
-        <icon-light @click="moveTo({ name: 'Light' })" />
-        <icon-gear @click="moveTo({ name: 'Settings' })" color="#48b6ff" />
-      </div>
-    </div>
+    <app-menu current="gear" />
   </div>
 </template>
 
@@ -59,37 +57,14 @@ export default {
   }
 }
 
-.list {
-  width: 100%;
-}
+.profile {
+  img {
+    width: 12%;
+    border-radius: 50%;
 
-.create {
-  font-size: 3em;
-  color: #606060;
-  margin: auto;
-}
-
-.menu {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  padding: 0.5em;
-  width: 100%;
-  border: none;
-  border-top: 0.5px solid #707070;
-  text-align: center;
-}
-
-.icons {
-  width: 90%;
-  display: table;
-  margin: auto;
-
-  .icon {
-    cursor: pointer;
-    display: table-cell;
-    width: 20%;
-    background: none;
+    @media (max-width: 520px) {
+      width: 30%;
+    }
   }
 }
 </style>
