@@ -33,7 +33,7 @@ export default {
 <template>
   <div class="content">
     <div class="header">
-      <app-header title="회원가입" />
+      <app-header title="JOIN" />
     </div>
     <div class="form">
       <div class="form__field">

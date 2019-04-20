@@ -14,11 +14,24 @@ export default {
         background: '#48b6ff',
         'font-family': 'S-CoreDream-5Medium'
       }
+    },
+    cubeStyle () {
+      return {
+        filter: `drop-shadow(0px 0px ${this.light/10}px gold)`
+      }
     }
   },
   data () {
     return {
-      light: 50
+      light: 50,
+      start: {
+        hour: 12,
+        minute: 30
+      },
+      end: {
+        hour: 19,
+        minute: 30
+      }
     }
   }
 }
@@ -29,7 +42,7 @@ export default {
     <app-title />
     <div class="light">
       <div class="image">
-        <img class="cube" src="../assets/cube.png">
+        <img class="cube" src="../assets/cube.png" :style="cubeStyle">
       </div>
       <div class="slider">
         <span class="value">{{ light }}<small>%</small></span>
@@ -46,6 +59,38 @@ export default {
         />
       </div>
     </div>
+    <div class="feature">
+      <div class="feature__title">기능</div>
+      <div class="setups">
+        <div class="setup">
+          <div class="field">보호모드</div>
+          <div class="value">
+            <toggle-button
+              :value="false"
+              color="#48B6FF"
+              :sync="true"
+              :labels="true"
+            />
+          </div>
+        </div>
+        <div class="setup">
+          <div class="field">타이머 설정</div>
+          <div class="value">
+            <toggle-button
+              :value="false"
+              color="#48B6FF"
+              :sync="true"
+              :labels="true"
+            />
+          </div>
+          <span class="range">
+            <input v-model.number="start.hour"/>:<input v-model.number="start.minute"/>
+             ~
+            <input v-model.number="end.hour"/>:<input v-model.number="end.minute"/>
+          </span>
+        </div>
+      </div>
+    </div>
     <app-menu current="light" />
   </div>
 </template>
@@ -53,7 +98,7 @@ export default {
 <style lang="scss" scoped>
 .light {
   width: 100%;
-  padding-top: 1.5em;
+  padding-top: 1em;
   text-align: center;
 
   .cube {
@@ -67,8 +112,9 @@ export default {
 
   .value {
     margin-top: 0.5em;
-    font-size: 1.5em;
+    font-size: 1.8em;
     display: block;
+    font-weight: bold;
   }
 
   small {
@@ -90,6 +136,64 @@ export default {
 
   .wrap {
     padding-bottom: 0.5em;
+  }
+}
+
+.feature {
+  margin: auto;
+  margin-top: 1.5em;
+  text-align: center;
+
+  &__title {
+    padding-left: 0.7em;
+    margin-bottom: 0.5em;
+    text-align: left;
+    font-size: 1.3rem;
+    // color: #606060;
+    color: #505050;
+    font-weight: bold;
+  }
+
+  .setups {
+    margin: auto;
+    width: 92%;
+    display: table;
+    border: 1px solid rgba(112, 112, 112, 0.23);
+    border-radius: 8px;
+  }
+
+  .setup {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .setup:not(:last-child) {
+    border: none;
+    border-bottom: 1px solid rgba(112, 112, 112, 0.23);
+  }
+
+  .field, .value {
+    color: #707070;
+    padding: 1em;
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+
+.range {
+  margin-right: 0.3em;
+  margin-bottom: 0.5em;
+  width: 99%;
+  text-align: right;
+  font-size: 2em;
+
+  input {
+    text-align: center;
+    width: 10%;
+    font-size: 1.5rem;
+    border: none;
+    border-bottom: 1px solid rgba(112, 112, 112, 0.23);
   }
 }
 </style>

@@ -12,11 +12,16 @@ export default {
 
 <style lang="scss" scoped>
 .header {
+  font-family: 'arista-20-regular';
   width: 100%;
-  color: #606060;
-  margin-top: 1.5rem;
-  margin-bottom: 1rem;
+  // color: #606060;
+  color: white;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  margin-bottom: 0.38em;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 2rem;
+  background: linear-gradient(135deg, #BFEBFF, #48B6FF);
+  box-shadow: 15px 19px 32px -18px rgba(21, 19, 19, 0.07);
 }
 </style>

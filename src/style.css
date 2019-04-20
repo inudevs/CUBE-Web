@@ -3,12 +3,14 @@
   src:url("assets/fonts/Arista2.0-RegularTrial.ttf") format("woff");
 }
 
-@font-face {
+/* @font-face {
   font-family: 'S-CoreDream-5Medium'; 
   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-5Medium.woff') format('woff'); 
   font-weight: normal; 
   font-style: normal;
-}
+} */
+
+@import url('https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css');
 
 *:focus {
   outline: none;
@@ -24,5 +26,6 @@ html, body, #app, .content {
 
 .content {
   /* padding: 2em; */
-  font-family: 'S-CoreDream-5Medium'; 
+  /* font-family: 'S-CoreDream-5Medium'; */
+  font-family: 'NanumSquareRound', sans-serif;
 }

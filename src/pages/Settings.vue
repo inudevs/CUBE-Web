@@ -31,7 +31,7 @@ export default {
   <div class="content">
     <app-title />
     <div class="profile">
-      <img src="https://avatars0.githubusercontent.com/u/32605822?s=460">
+      <img src="../assets/profile.jpeg">
     </div>
     <div class="about">
       <div class="about__menu">
@@ -63,6 +63,7 @@ export default {
     margin: auto;
     margin-top: 1em;
     width: 12%;
+    border: 1px solid lightgray;
     border-radius: 50%;
 
     @media (max-width: 520px) {

@@ -20,7 +20,9 @@ export default {
         { time: '09:00', temp: 28, humi: 20 },
         { time: '10:00', temp: 21, humi: 29 },
         { time: '11:00', temp: 20, humi: 20 }
-      ]
+      ],
+      minRange: 18,
+      maxRange: 25
     }
   },
   methods: {
@@ -43,7 +45,7 @@ export default {
       <div class="temp__data">
         <div
           class="temp__data-cell"
-          v-for="(item, idx) in data.slice(-3)"
+          v-for="(item, idx) in data.slice(-4)"
           :key="idx"
         >
           <div class="field">{{ item.time }}</div>
@@ -53,6 +55,12 @@ export default {
             </span>
           </div>
         </div>
+      </div>
+      <div class="setup">
+        <span class="setup__title">범위 설정</span>
+        <span class="setup__range">
+          <input v-model.number="minRange"/>° ~ <input v-model.number="maxRange"/>°
+        </span>
       </div>
     </div>
     <app-menu current="temp" />
@@ -93,6 +101,34 @@ export default {
     font-size: 1.2em;
     text-align: right;
     justify-content: flex-start;
+  }
+}
+
+.setup {
+  margin-top: 1.5em;
+  padding-left: 1em;
+
+  &__title {
+    font-size: 1.3rem;
+    // color: #606060;
+    color: #505050;
+    font-weight: bold;
+  }
+
+  &__range {
+    position: absolute;
+    right: 0.7em;
+    width: 99%;
+    text-align: right;
+    font-size: 2em;
+
+    input {
+      text-align: center;
+      width: 10%;
+      font-size: 1.5rem;
+      border: none;
+      border-bottom: 1px solid rgba(112, 112, 112, 0.23);
+    }
   }
 }
 </style>

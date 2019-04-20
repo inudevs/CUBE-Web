@@ -34,7 +34,7 @@ export default {
 <template>
   <div class="content">
     <div class="header">
-      <app-header title="로그인" />
+      <app-header title="LOGIN" />
     </div>
     <div class="form">
       <div class="form__field">

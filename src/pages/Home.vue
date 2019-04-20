@@ -31,7 +31,7 @@ export default {
         <i class="fas fa-plus-circle create"></i>
       </div>
       <div class="device" v-else>
-        <div class="device__title">Environment</div>
+        <div class="device__title">환경</div>
         <div class="device__env">
           <div class="env-left">
             <div class="env-left__text">현재 주변 환경은</div>
@@ -57,18 +57,18 @@ export default {
             </div>
           </div>
         </div>
-        <div class="device__title">Information</div>
+        <div class="device__title">정보</div>
         <div class="device__info">
           <p>빗살무늬토기는 그릇 표면을 눌러 기하학적 무늬를 나타낸 신석기시대의 대표적인 토기이다.</p>
         </div>
-        <div class="device__title">Notice</div>
+        <div class="device__title">알림</div>
         <div class="notice">
           <div class="notice__menu">
             <div class="field">온도</div>
             <div class="value">
               <toggle-button
                 :value="false"
-                color="#82C7EB"
+                color="#48B6FF"
                 :sync="true"
                 :labels="true"
               />
@@ -79,7 +79,7 @@ export default {
             <div class="value">
               <toggle-button
                 :value="false"
-                color="#82C7EB"
+                color="#48B6FF"
                 :sync="true"
                 :labels="true"
               />
@@ -90,7 +90,7 @@ export default {
             <div class="value">
               <toggle-button
                 :value="false"
-                color="#82C7EB"
+                color="#48B6FF"
                 :sync="true"
                 :labels="true"
               />
@@ -101,7 +101,7 @@ export default {
             <div class="value">
               <toggle-button
                 :value="false"
-                color="#82C7EB"
+                color="#48B6FF"
                 :sync="true"
                 :labels="true"
               />
@@ -148,7 +148,9 @@ export default {
   &__title {
     text-align: left;
     font-size: 1.3em;
-    color: #606060;
+    // color: #606060;
+    color: #505050;
+    font-weight: bold;
   }
 
   &__title:not(:first-child) {
@@ -181,7 +183,7 @@ export default {
     border: 1px solid rgba(112, 112, 112, 0.23);
     border-radius: 8px;
     margin-top: 0.2em;
-    margin-bottom: 0.6em;
+    margin-bottom: 0.8em;
   }
 
   &__info p {
@@ -243,6 +245,7 @@ export default {
     font-size: 2rem;
     margin: 0.3em;
     color: #ff3d00; // todo
+    font-weight: bolder;
   }
 }
 
