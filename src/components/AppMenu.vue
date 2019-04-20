@@ -43,8 +43,9 @@ export default {
   position: fixed;
   left: 0;
   bottom: 0;
-  padding: 0.5em;
-  width: 100%;
+  padding-top: 0.5em;
+  padding-bottom: .5em;
+  width: 100vw;
   border: none;
   border-top: 1px solid rgba(112, 112, 112, 0.23);
   text-align: center;
@@ -52,9 +53,9 @@ export default {
 }
 
 .icons {
-  width: 90%;
-  display: table;
-  margin: auto;
+  display: flex;
+  justify-content: center;
+
 
   .icon {
     cursor: pointer;
