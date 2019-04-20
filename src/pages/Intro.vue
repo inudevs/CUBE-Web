@@ -54,7 +54,7 @@ export default {
   font-size: 1em;
 
   @media (max-width: 700px) {
-    width: 15em;
+    width: 12em;
   }
 }
 
@@ -70,8 +70,8 @@ export default {
   font-size: 1.5em;
 
   @media (max-width: 700px) {
-    font-size: 1.5em;
-    margin-top: 5em;
+    font-size: 1.3em;
+    margin-top: 7.2em;
 
     img {
       width: 2.5em;

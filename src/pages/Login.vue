@@ -95,7 +95,7 @@ export default {
   font-size: 1em;
 
   @media (max-width: 500px) {
-    width: 15em;
+    width: 12em;
   }
 }
 

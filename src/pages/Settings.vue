@@ -87,7 +87,7 @@ export default {
   margin: auto;
   text-align: left;
   padding: 0.5em;
-  font-size: 1.2em;
+  font-size: 1em;
 
   @media (max-width: 520px) {
     width: 90%;

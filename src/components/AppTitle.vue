@@ -15,7 +15,7 @@ export default {
   width: 100%;
   color: #606060;
   margin-top: 1.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   text-align: center;
   font-size: 1.5rem;
 }
