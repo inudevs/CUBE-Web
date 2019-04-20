@@ -160,6 +160,7 @@ export default {
     width: 100%;
     display: table;
     border-spacing: 0.5em;
+    margin-top: -0.3em; // set top border spacing to 0.2em
   }
 
   .env-left {
@@ -179,6 +180,7 @@ export default {
     height: 3em;
     border: 1px solid #d3d3d3;
     border-radius: 8px;
+    margin-top: 0.2em;
     margin-bottom: 0.6em;
   }
 
@@ -257,6 +259,7 @@ export default {
 }
 
 .notice {
+  margin-top: 0.2em;
   padding: 0.5em;
   border: 1px solid #d3d3d3;
   border-radius: 8px;
