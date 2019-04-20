@@ -45,7 +45,7 @@ export default {
   padding: 0.5em;
   width: 100%;
   border: none;
-  border-top: 0.5px solid #707070;
+  border-top: 1px solid rgba(112, 112, 112, 0.23);
   text-align: center;
   background: white;
 }

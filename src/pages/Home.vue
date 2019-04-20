@@ -166,7 +166,7 @@ export default {
   .env-left {
     margin: 0.5em;
     display: table-cell;
-    border: 1px solid #d3d3d3;
+    border: 1px solid rgba(112, 112, 112, 0.23);
     border-radius: 8px;
   }
 
@@ -178,7 +178,7 @@ export default {
   &__info {
     width: 100%;
     height: 3em;
-    border: 1px solid #d3d3d3;
+    border: 1px solid rgba(112, 112, 112, 0.23);
     border-radius: 8px;
     margin-top: 0.2em;
     margin-bottom: 0.6em;
@@ -216,7 +216,7 @@ export default {
 
   &__data-cell:not(:last-child) {
     border: none;
-    border-bottom: 1px solid #d3d3d3;
+    border-bottom: 1px solid rgba(112, 112, 112, 0.23);
   }
 
   &__field, &__value {
@@ -232,7 +232,7 @@ export default {
 
 .env-right-top {
   padding: 0.5em;
-  border: 1px solid #d3d3d3;
+  border: 1px solid rgba(112, 112, 112, 0.23);
   border-radius: 8px;
 
   &__text {
@@ -249,7 +249,7 @@ export default {
 .env-right-bottom {
   margin-top: 0.3em;
   padding: 0.5em;
-  border: 1px solid #d3d3d3;
+  border: 1px solid rgba(112, 112, 112, 0.23);
   border-radius: 8px;
 
   .icon {
@@ -261,7 +261,7 @@ export default {
 .notice {
   margin-top: 0.2em;
   padding: 0.5em;
-  border: 1px solid #d3d3d3;
+  border: 1px solid rgba(112, 112, 112, 0.23);
   border-radius: 8px;
 
   &__menu {
@@ -272,7 +272,7 @@ export default {
 
   &__menu:not(:last-child) {
     border: none;
-    border-bottom: 1px solid #d3d3d3;
+    border-bottom: 1px solid rgba(112, 112, 112, 0.23);
   }
 
   .field {

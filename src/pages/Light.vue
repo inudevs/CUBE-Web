@@ -70,7 +70,7 @@ export default {
     font-size: 1.5em;
     display: block;
   }
-  
+
   small {
     font-size: 60%;
   }

@@ -90,7 +90,7 @@ export default {
 
   &__menu:not(:last-child) {
     border: none;
-    border-bottom: 1px solid #d3d3d3;
+    border-bottom: 1px solid rgba(112, 112, 112, 0.23);
   }
 
   .field, .setting {
