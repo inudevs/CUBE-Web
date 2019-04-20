@@ -25,7 +25,17 @@ export default {
       }
       console.log(loginData)
       // 로그인 처리
-      this.$router.push({ name: 'Home' })
+      this.$api.post('/auth/login', loginData)
+        .then((res) => {
+          console.log(res)
+          if (res.status === 200) {
+            this.$router.push({ name: 'Home' })
+          }
+        })
+        .catch((err) => {
+          console.log(err)
+          this.$swal('에러!', '로그인 중 에러가 발생했어요.', 'error')
+        })
     }
   }
 }
@@ -43,7 +53,7 @@ export default {
       </div>
       <div class="form__field">
         <span class="name">비밀번호</span>
-        <input class="input" v-model.trim="password"/>
+        <input class="input" type="password" v-model.trim="password"/>
       </div>
       <div class="button-wrap">
         <app-button

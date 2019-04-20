@@ -37,7 +37,7 @@ export default {
     <app-title />
     <div class="light">
       <div class="image">
-        <img class="cube" :src="require(`../assets/cube${Math.floor(this.light / 14)}.png`)">
+        <img class="cube" :src="require(`../assets/cube${Math.floor(this.light / 15)}.png`)">
       </div>
       <div class="slider">
         <span class="value">{{ light }}<small>%</small></span>

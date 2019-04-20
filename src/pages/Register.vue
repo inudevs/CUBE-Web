@@ -13,7 +13,8 @@ export default {
   data () {
     return {
       email: '',
-      password: ''
+      password: '',
+      name: ''
     }
   },
 
@@ -25,6 +26,17 @@ export default {
         password: this.password
       }
       console.log(registerData)
+      this.$api.post('/create/user', registerData)
+        .then((res) => {
+          // eslint-disable-next-line
+          window.console.log(res)
+          if (res.status === 200) {
+            this.$swal('가입 성공!', '이제 로그인을 해 주세요.', 'success')
+            this.$router.push({ name: 'Login' })
+          } else {
+            this.$swal('에러!', '가입 중 에러가 발생했어요.', 'error')
+          }
+        })
     }
   }
 }
@@ -42,7 +54,7 @@ export default {
       </div>
       <div class="form__field">
         <span class="name">비밀번호</span>
-        <input class="input" v-model.trim="password"/>
+        <input class="input" type="password" v-model.trim="password"/>
       </div>
       <div class="form__field">
         <span class="name">이름</span>
@@ -53,7 +65,7 @@ export default {
           color="#48B6FF"
           border="#48B6FF"
           background="white"
-          @click="login"
+          @click="register"
         >
           회원가입
         </app-button>
