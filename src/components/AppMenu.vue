@@ -47,6 +47,7 @@ export default {
   border: none;
   border-top: 0.5px solid #707070;
   text-align: center;
+  background: white;
 }
 
 .icons {

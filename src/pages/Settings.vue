@@ -54,17 +54,6 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-.none {
-  margin-top: 20%;
-  color: #606060;
-  width: 100%;
-  text-align: center;
-
-  @media (max-width: 520px) {
-    margin-top: 60%;
-  }
-}
-
 .profile {
   width: 100%;
   text-align: center;
