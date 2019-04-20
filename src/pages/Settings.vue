@@ -18,7 +18,7 @@ export default {
   },
   methods: {
     changePassword () {
-      return 1
+      this.$swal('에러!', '준비중인 기능입니다.', 'error')
     },
     logout () {
       this.$router.push({ name: 'Intro' })

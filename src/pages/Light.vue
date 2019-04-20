@@ -14,11 +14,6 @@ export default {
         background: '#48b6ff',
         'font-family': 'S-CoreDream-5Medium'
       }
-    },
-    cubeStyle () {
-      return {
-        filter: `drop-shadow(0px 0px ${this.light/10}px gold)`
-      }
     }
   },
   data () {
@@ -42,7 +37,7 @@ export default {
     <app-title />
     <div class="light">
       <div class="image">
-        <img class="cube" src="../assets/cube.png" :style="cubeStyle">
+        <img class="cube" :src="require(`../assets/cube${Math.floor(this.light / 14)}.png`)">
       </div>
       <div class="slider">
         <span class="value">{{ light }}<small>%</small></span>
@@ -102,7 +97,7 @@ export default {
   text-align: center;
 
   .cube {
-    width: 40%;
+    width: 80%;
   }
 
   .slider {
@@ -142,6 +137,7 @@ export default {
 .feature {
   margin: auto;
   margin-top: 1.5em;
+  margin-bottom: 5em;
   text-align: center;
 
   &__title {

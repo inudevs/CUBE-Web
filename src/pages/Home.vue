@@ -115,6 +115,10 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+.main {
+  margin-bottom: 5em;
+}
+
 .none {
   margin-top: 20%;
   color: #606060;
