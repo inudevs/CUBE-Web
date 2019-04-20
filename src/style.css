@@ -1,0 +1,24 @@
+@font-face{
+  font-family:"arista-20-regular";
+  src:url("assets/fonts/Arista2.0-RegularTrial.ttf") format("woff");
+}
+
+@font-face {
+  font-family: 'S-CoreDream-5Medium'; 
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-5Medium.woff') format('woff'); 
+  font-weight: normal; 
+  font-style: normal;
+}
+
+html, body, #app, .content {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.content {
+  /* padding: 2em; */
+  font-family: 'S-CoreDream-5Medium'; 
+}
