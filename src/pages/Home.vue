@@ -38,11 +38,11 @@ export default {
             <div class="env-left__data">
               <div class="env-left__data-cell">
                 <div class="env-left__field">온도</div>
-                <div class="env-left__value">25°</div>
+                <div class="env-left__value">28°</div>
               </div>
               <div class="env-left__data-cell">
                 <div class="env-left__field">습도</div>
-                <div class="env-left__value">36%</div>
+                <div class="env-left__value">20%</div>
               </div>
             </div>
           </div>

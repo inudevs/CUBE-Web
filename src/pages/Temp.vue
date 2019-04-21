@@ -20,8 +20,14 @@ export default {
         { time: '06:29', temp: 22, humi: 19 },
         { time: '07:00', temp: 28, humi: 20 }
       ],
-      minRange: 18,
-      maxRange: 25
+      temp: {
+        minRange: 18,
+        maxRange: 25
+      },
+      humi: {
+        minRange: 15,
+        maxRange: 30
+      }
     }
   },
   methods: {
@@ -55,11 +61,19 @@ export default {
           </div>
         </div>
       </div>
-      <div class="setup">
-        <span class="setup__title">범위 설정</span>
-        <span class="setup__range">
-          <input v-model.number="minRange"/>° ~ <input v-model.number="maxRange"/>°
-        </span>
+      <div class="setups">
+        <div class="setup">
+          <span class="setup__title">온도 범위 설정</span>
+          <span class="setup__range">
+            <input v-model.number="temp.minRange"/>° ~ <input v-model.number="temp.maxRange"/>°
+          </span>
+        </div>
+        <div class="setup">
+          <span class="setup__title">습도 범위 설정</span>
+          <span class="setup__range">
+            <input v-model.number="humi.minRange"/>% ~ <input v-model.number="humi.maxRange"/>%
+          </span>
+        </div>
       </div>
     </div>
     <app-menu current="temp" />
@@ -68,7 +82,7 @@ export default {
 
 <style lang="scss" scoped>
 .temp {
-  padding: 0.5em;
+  padding: 0.8em;
 
   &__data-cell {
     display: flex;
@@ -103,31 +117,34 @@ export default {
   }
 }
 
-.setup {
-  margin-top: 1.5em;
-  padding-left: 1em;
+.setups {
+  color: #707070;
+  display: table;
+  margin-bottom: 5em;
+  width: 92%;
+  border: 1px solid rgba(112, 112, 112, 0.23);
+  border-radius: 8px;
+  margin: auto;
+  text-align: left;
+  padding: 0.5em;
+  font-size: 1em;
+  border-spacing: 0.8em;
+}
 
-  &__title {
-    font-size: 1.3rem;
-    // color: #606060;
-    color: #505050;
-    font-weight: bold;
-  }
+.setup {
+  display: table-row;
 
   &__range {
-    position: absolute;
-    right: 0.7em;
-    width: 99%;
-    text-align: right;
-    font-size: 2em;
+    padding-left: 4em;
+    font-size: 1.2em;
+  }
 
-    input {
-      text-align: center;
-      width: 10%;
-      font-size: 1.5rem;
-      border: none;
-      border-bottom: 1px solid rgba(112, 112, 112, 0.23);
-    }
+  input {
+    text-align: center;
+    width: 10%;
+    font-size: 1.3rem;
+    border: none;
+    border-bottom: 1px solid rgba(112, 112, 112, 0.23);
   }
 }
 </style>
