@@ -1,12 +1,18 @@
 <script>
 export default {
-  name: 'AppTitle'
+  name: 'AppTitle',
+  props: {
+    title: {
+      type: String,
+      default: 'CUBE'
+    }
+  }
 }
 </script>
 
 <template>
   <div class="header">
-    <span class="header__title">CUBE</span>
+    <span class="header__title">{{ title }}</span>
   </div>
 </template>
 

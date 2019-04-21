@@ -21,7 +21,7 @@ export default {
 
 <template>
   <div class="content">
-    <app-title />
+    <app-title title="HOME" />
     <div class="main">
       <div
         class="none"
@@ -49,7 +49,9 @@ export default {
           <div class="env-right">
             <div class="env-right-top">
               <div class="env-right-top__text">현재 미세먼지는</div>
-              <div class="env-right-top__status">위험</div>
+              <div class="env-right-top__status">
+                정상
+              </div>
               <div class="env-right-top__text">입니다.</div>
             </div>
             <div class="env-right-bottom">
@@ -248,7 +250,8 @@ export default {
   &__status {
     font-size: 2rem;
     margin: 0.3em;
-    color: #ff3d00; // todo
+    // color: #ff3d00; // 위험
+    color: green;
     font-weight: bolder;
   }
 }

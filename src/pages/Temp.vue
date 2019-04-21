@@ -13,13 +13,12 @@ export default {
   data () {
     return {
       data: [
-        { time: '05:00', temp: 25, humi: 23 },
-        { time: '06:00', temp: 22, humi: 24 },
-        { time: '07:00', temp: 23, humi: 25 },
-        { time: '08:00', temp: 24, humi: 19 },
-        { time: '09:00', temp: 28, humi: 20 },
-        { time: '10:00', temp: 21, humi: 29 },
-        { time: '11:00', temp: 20, humi: 20 }
+        { time: '04:31', temp: 25, humi: 21 },
+        { time: '05:00', temp: 25, humi: 29 },
+        { time: '05:30', temp: 30, humi: 24 },
+        { time: '06:01', temp: 19, humi: 25 },
+        { time: '06:29', temp: 22, humi: 19 },
+        { time: '07:00', temp: 28, humi: 20 }
       ],
       minRange: 18,
       maxRange: 25
@@ -35,7 +34,7 @@ export default {
 
 <template>
   <div class="content">
-    <app-title />
+    <app-title title="STATUS" />
     <div class="temp">
       <app-chart
         :labels="mapData('time')"

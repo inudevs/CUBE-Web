@@ -14,6 +14,17 @@ export default {
         background: '#48b6ff',
         'font-family': 'S-CoreDream-5Medium'
       }
+    },
+    rangeStyle () {
+      return {
+        color: (this.timer) ? 'black' : 'lightgray'
+      }
+    },
+    inputStyle () {
+      return {
+        'pointer-events': (this.timer) ? 'unset' : 'none',
+        color: (this.timer) ? 'black' : 'lightgray'
+      }
     }
   },
   data () {
@@ -26,7 +37,8 @@ export default {
       end: {
         hour: 19,
         minute: 30
-      }
+      },
+      timer: false
     }
   }
 }
@@ -34,10 +46,10 @@ export default {
 
 <template>
   <div class="content">
-    <app-title />
+    <app-title title="LIGHT" />
     <div class="light">
       <div class="image">
-        <img class="cube" :src="require(`../assets/cube${Math.floor(this.light / 15)}.png`)">
+        <img class="cube" :src="require(`../assets/cube${Math.floor(this.light / 20)}.png`)">
       </div>
       <div class="slider">
         <span class="value">{{ light }}<small>%</small></span>
@@ -72,16 +84,16 @@ export default {
           <div class="field">타이머 설정</div>
           <div class="value">
             <toggle-button
-              :value="false"
+              v-model="timer"
               color="#48B6FF"
               :sync="true"
               :labels="true"
             />
           </div>
-          <span class="range">
-            <input v-model.number="start.hour"/>:<input v-model.number="start.minute"/>
+          <span class="range" :style="rangeStyle">
+            <input v-model.number="start.hour" :style="inputStyle"/>:<input v-model.number="start.minute" :style="inputStyle"/>
              ~
-            <input v-model.number="end.hour"/>:<input v-model.number="end.minute"/>
+            <input v-model.number="end.hour" :style="inputStyle"/>:<input v-model.number="end.minute" :style="inputStyle"/>
           </span>
         </div>
       </div>

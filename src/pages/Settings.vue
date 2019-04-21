@@ -29,7 +29,7 @@ export default {
 
 <template>
   <div class="content">
-    <app-title />
+    <app-title title="PROFILE" />
     <div class="profile">
       <img src="../assets/profile.jpeg">
     </div>
